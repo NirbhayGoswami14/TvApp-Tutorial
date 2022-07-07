@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import com.ncode.test2tvapp.R
-import com.ncode.test2tvapp.controller.TrendingMoviesController
 import com.ncode.test2tvapp.retrofit.ControllerInterFace
 import com.ncode.test2tvapp.view.fragment.MainFragment
 
@@ -19,11 +18,6 @@ class MainActivity : FragmentActivity() {
         setContentView(R.layout.activity_main)
         supportFragmentManager.beginTransaction().replace(R.id.main_browse_fragment,MainFragment())
             .commitNow()
-        //button.setOnClickListener {
-            Log.d("", "onCreate:"+ R.string.api_key.toString())
-            //TrendingMoviesController(this,this).callApi()
-            //textView.text="yeah Buddy"
-        //}
     }
 
 
