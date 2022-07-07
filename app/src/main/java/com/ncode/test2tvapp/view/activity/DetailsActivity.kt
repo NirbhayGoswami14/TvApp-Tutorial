@@ -11,5 +11,6 @@ class DetailsActivity :FragmentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
         supportFragmentManager.beginTransaction().replace(R.id.details_fragment,DetailsFragment()).commitNow()
+
     }
-}
+ }

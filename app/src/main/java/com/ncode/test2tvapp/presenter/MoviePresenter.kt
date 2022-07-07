@@ -8,9 +8,9 @@ import com.bumptech.glide.Glide
 import com.ncode.test2tvapp.model.Result
 import com.ncode.test2tvapp.retrofit.RetroClient
 
-class MoviePresenter():Presenter() {
-    override fun onCreateViewHolder(parent: ViewGroup?): ViewHolder? {
-        var cardView=ImageCardView(parent!!.context)
+class MoviePresenter:Presenter() {
+    override fun onCreateViewHolder(parent: ViewGroup?): ViewHolder {
+        val cardView=ImageCardView(parent!!.context)
         cardView.cardType=BaseCardView.CARD_TYPE_INFO_UNDER_WITH_EXTRA
         cardView.infoVisibility=BaseCardView.CARD_REGION_VISIBLE_ACTIVATED
         return ViewHolder(cardView)
