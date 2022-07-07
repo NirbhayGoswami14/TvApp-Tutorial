@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import com.ncode.test2tvapp.R
 import com.ncode.test2tvapp.controller.TrendingMoviesController
-import com.ncode.test2tvapp.model.TrendingMoviesResponse
 import com.ncode.test2tvapp.retrofit.ControllerInterFace
 import com.ncode.test2tvapp.view.fragment.MainFragment
 
