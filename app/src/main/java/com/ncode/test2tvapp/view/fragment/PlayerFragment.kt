@@ -20,9 +20,12 @@ class PlayerFragment():VideoSupportFragment()
         val playerAdapter=MediaPlayerAdapter(requireContext())
         transportControlGlue= PlaybackTransportControlGlue(requireContext(),playerAdapter)
         transportControlGlue.host=host
+        transportControlGlue.isSeekEnabled=true
         transportControlGlue.playWhenPrepared()
 
+
         playerAdapter.setDataSource(Uri.parse("android.resource://"+requireActivity().packageName+"/"+ R.raw.tom_and_jerry))
+
 
     }
 

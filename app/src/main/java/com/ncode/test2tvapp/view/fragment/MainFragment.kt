@@ -3,10 +3,7 @@ package com.ncode.test2tvapp.view.fragment
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.os.Parcelable
 import android.util.Log
-import android.widget.Toast
-import androidx.core.app.ActivityOptionsCompat
 import androidx.leanback.app.BrowseSupportFragment
 import androidx.leanback.widget.*
 import com.ncode.test2tvapp.controller.PopularMoviesController
@@ -14,10 +11,7 @@ import com.ncode.test2tvapp.controller.TopRatedMoviesController
 import com.ncode.test2tvapp.controller.TrendingMoviesController
 import com.ncode.test2tvapp.controller.UpcomingMoviesController
 import com.ncode.test2tvapp.model.*
-import com.ncode.test2tvapp.presenter.PopularMoviePresenter
-import com.ncode.test2tvapp.presenter.TopRatedMoviePresenter
-import com.ncode.test2tvapp.presenter.TrendingMoviePresenter
-import com.ncode.test2tvapp.presenter.UpcomingMoviePresenter
+import com.ncode.test2tvapp.presenter.MoviePresenter
 import com.ncode.test2tvapp.retrofit.ControllerInterFace
 import com.ncode.test2tvapp.retrofit.RetroClient
 import com.ncode.test2tvapp.util.Config
@@ -52,10 +46,10 @@ class MainFragment() : BrowseSupportFragment(), ControllerInterFace {
         val headerItem3=HeaderItem(3,Config.UPCOMING)
         val rowsAdapter=ArrayObjectAdapter(ListRowPresenter())
 
-        val arrayObjectAdapter=ArrayObjectAdapter(TrendingMoviePresenter())
-        val popularObjectAdapter=ArrayObjectAdapter(PopularMoviePresenter())
-        val upcomingObjectAdapter=ArrayObjectAdapter(UpcomingMoviePresenter())
-        val topRatedObjectAdapter=ArrayObjectAdapter(TopRatedMoviePresenter())
+        val arrayObjectAdapter=ArrayObjectAdapter(MoviePresenter())
+        val popularObjectAdapter=ArrayObjectAdapter(MoviePresenter())
+        val upcomingObjectAdapter=ArrayObjectAdapter(MoviePresenter())
+        val topRatedObjectAdapter=ArrayObjectAdapter(MoviePresenter())
 
         for(element in trendMovieList)
         {
