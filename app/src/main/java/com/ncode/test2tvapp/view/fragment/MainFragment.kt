@@ -101,27 +101,27 @@ class MainFragment() : BrowseSupportFragment(), ControllerInterFace {
         when(method)
         {
             Config.TRENDING->{
-                val res=response as TrendingMoviesResponse
+                val res=response as MoviesResponse
                 trendMovieList=res.results
                 TopRatedMoviesController(requireContext(),this).callTopRatedApi()
                 Log.d(TAG, "onSuccess:1")
 
             }
             Config.TOP_RATED->{
-                val res=response as TrendingMoviesResponse
+                val res=response as MoviesResponse
                 topRatedMovieList=res.results
                 UpcomingMoviesController(requireContext(),this).callUpcomingApi()
                 Log.d(TAG, "onSuccess: 2")
             }
             Config.UPCOMING->{
-                val res=response as TrendingMoviesResponse
+                val res=response as MoviesResponse
                 upComingMovieList=res.results
                 PopularMoviesController(requireContext(),this).callPopularApi()
                 Log.d(TAG, "onSuccess: 3")
                 Log.d("", "onBindViewHolder: "+ RetroClient.BACKDROP_URL + upComingMovieList[0].backdrop_path)
             }
             Config.POPULAR->{
-                val res=response as TrendingMoviesResponse
+                val res=response as MoviesResponse
                 popularMovieList=res.results
                 Log.d(TAG, "onSuccess: 4")
                 setUiElements()

@@ -2,7 +2,8 @@ package com.ncode.test2tvapp.model
 
 import java.io.Serializable
 
-data class TrendingMoviesResponse(
+data class MoviesResponse(
+    val date:Dates,
     val page: Int,
     val results: List<Result>,
     val total_pages: Int,
@@ -25,3 +26,7 @@ data class TrendingMoviesResponse(
     val vote_average: Double,
     val vote_count: Int
 ) : Serializable
+data class Dates(
+    val maximum: String,
+    val minimum: String
+)
